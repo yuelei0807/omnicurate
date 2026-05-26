@@ -1,0 +1,117 @@
+/* OmniRetail Data Platform — minimalist admin theme */
+
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+    --sidebar: #f3f4f6;
+    --radius: 8px;
+    --pad: 24px;
+  }
+  
+  /* Base */
+  html, body, [class*="css"] {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background-color: var(--bg);
+  }
+  
+  /* Layout width */
+  .block-container {
+    max-width: 1200px;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Hide Streamlit chrome */
+  #MainMenu { visibility: hidden; }
+  footer { visibility: hidden; }
+  header[data-testid="stHeader"] { background: transparent; }
+  
+  /* Sidebar */
+  section[data-testid="stSidebar"] {
+    background-color: var(--sidebar);
+    border-right: 1px solid var(--border);
+  }
+  
+  section[data-testid="stSidebar"] .block-container {
+    padding-top: 1rem;
+  }
+  
+  /* Typography */
+  h1 {
+    font-weight: 600 !important;
+    color: var(--text) !important;
+    letter-spacing: -0.02em;
+  }
+  
+  h2, h3 {
+    font-weight: 600 !important;
+    color: var(--text) !important;
+  }
+  
+  p, .stMarkdown p {
+    color: var(--text);
+  }
+  
+  /* Cards / surfaces */
+  div[data-testid="stVerticalBlock"] > div:has(.kpi-card) {
+    gap: 0.75rem;
+  }
+  
+  .kpi-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: none;
+  }
+  
+  .kpi-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  
+  .kpi-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.2;
+  }
+  
+  .section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  /* Tables */
+  [data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  
+  /* Buttons / links accent */
+  .stButton > button[kind="primary"],
+  a {
+    color: var(--accent);
+  }
+  
+  .stButton > button[kind="primary"] {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }

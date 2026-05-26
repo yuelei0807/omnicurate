@@ -1,0 +1,14 @@
+{
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Darwin",
+  "include": ["src", "app", "tests"],
+  "extraPaths": ["."],
+  "venvPath": "/opt",
+  "venv": "anaconda3",
+  "typeCheckingMode": "basic",
+  "reportMissingTypeStubs": "none",
+  "reportArgumentType": "none",
+  "reportCallIssue": "none",
+  "reportReturnType": "none",
+  "reportAssignmentType": "none"
+}
